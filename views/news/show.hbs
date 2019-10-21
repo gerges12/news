@@ -1,0 +1,64 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="show">
+           <div class="con"> 
+           <h5>{{post.title}}</h5> 
+
+            
+            <img src="http://localhost:3000/{{post.file}}" class="img-responsive" style="color:blue;width:1500px"/>
+
+           <span class="post-title" ><b>{{post.date}}</b><br />
+           </span>
+            <p>  {{post.body}}   </p> 
+
+           </div>
+           
+
+            {{# each coms}}
+               <div class="comment" id="{{_id}}">
+                    
+                      <div class="col-sm-8">
+            <div class="panel panel-white post -shadow">
+                <div class="post-heading">
+                    <div class="pull-left image">
+                        <img src="http://localhost:3000/{{user}}" class="img-circle avatar" alt="user profile image">
+                    </div>
+                    <div class="pull-left meta">
+                        <div class="title h5">
+                            <a href="#"><b>{{name}}</b></a>
+                            made a comment. 
+                        </div>
+                        <h6 class="text-muted time">1 minute ago</h6>
+                    </div>
+                </div> 
+                <div class="post-description"> 
+                    <p class="te">{{text}}</p>
+                    
+                </div>
+
+            </div>
+           </div>
+
+               </div> 
+                {{/each}}
+                  {{# if login}}
+
+            <div class="wcom">
+                <h2 class="title h4">write comment </h2>
+		    <div class="pull-left image">
+                        <img src="http://localhost:3000/{{user.ph}}" class="profilepic" alt="user profile image">
+                    </div>
+	      	<form action="/comment/{{post._id}}" method="POST" id="sub_form" >
+		    <input class="te" type="text" name="com">
+		    <input class="btn btn-primary" type="submit" value="send">
+	     	</form>
+
+            </div> 
+            {{/if}}  
+		
+        
+        
+</div>
+

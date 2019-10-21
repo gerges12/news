@@ -1,0 +1,51 @@
+<div class="profile">
+  <div class="row">
+    <div class="col-md-6 img">
+<img class="logo" src="http://localhost:3000/{{user.ph}}" alt="My_Logo">
+    </div>
+    <div class="col-md-6 details">
+      <blockquote>
+        <h5>Fiona Gallagher</h5>
+        <small><cite title="Source Title">Chicago, United States of America  <i class="icon-map-marker"></i></cite></small>
+      </blockquote>
+      <p>
+        {{user.name}} 
+      </p>
+      <p>
+        {{user.bday}} 
+      </p>
+      <p>
+        {{user.enail}} 
+      </p>
+      <p>
+        {{user.city}} 
+      </p>
+      <p>
+        {{user.id}} 
+      </p>
+    </div>
+  </div>
+</div>
+
+<table id="t01">
+  <tr>
+     <th>date</th>
+    <th>clinicname</th>
+    <th>patientname</th> 
+    <th>description</th>
+  </tr>
+     {{# each books}}
+
+    <tr {{#if indec}}  www  {{/if}}>
+        <td> {{date}} </td>
+    <td>{{clinicname}}</td>
+    <td>{{patientname}}</td>
+    <td>{{description}}</td>
+  </tr>
+ {{/each}}
+
+  
+</table>
+<p>
+  {{user.ph}}
+</p>

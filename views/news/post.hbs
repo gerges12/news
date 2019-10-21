@@ -1,0 +1,31 @@
+<form action="/addpost" method="POST"  enctype="multipart/form-data">
+    <div class="form-group">
+                  <label for="email">نوع الخبر</label>
+                  <select name="ntype" class="form-control" >
+                      <option value="politics">سياسة</option >
+                      <option value="sports">رياضة  </option>
+                      <option value="economie">اقتصاد</option>
+                      <option value="fashion">موضة</option>
+                      <option value="accidents">حوادث</option>
+                    </select>
+
+              </div>
+              <div class="form-group">
+                    <label>عنوان الخبر</label><br>
+                    <input type="text" name="title" class="form-control"> <br>
+              </div>
+               <div class="form-group">
+                    <label>محتوى الخبر</label> <br>
+                   <textarea name="body" style=" height:100px" class="form-control">    </textarea>
+
+              </div>
+              <div class="form-group">
+                  <label for="profile">Your  Picture</label>
+                  <input type="file" id="foo" name="foo" class="form-control">
+                  
+
+             </div>
+                  <button type="submit" class="btn btn-primary">احفظ الخبر</button>
+
+</form>
+

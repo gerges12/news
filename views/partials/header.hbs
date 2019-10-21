@@ -1,0 +1,34 @@
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <class class="new">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">اخباربوك</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/">الرئيسية</a></li>
+      <li><a href="/department/politics">سياسة</a></li>
+      <li><a href="/department/sports">رياضة </a></li>
+            <li><a href="/department/art">فن </a></li>
+      <li><a href="/department/economie">اقتصاد</a></li>
+      <li><a href="/department/accidents">حوادث </a></li>
+
+    </ul>
+    </class>
+    <ul class="nav navbar-nav navbar-right">
+      {{# if login}}
+     <li><a href="/user/inf"><span><img class="profilepic" src="http://localhost:3000/{{user.ph}}" alt="My_Logo"></span> {{user.name}}</a></li>
+
+      <li><a href="/user/adminpost"><span class="glyphicon glyphicon-user"></span> post now</a></li>
+      <li><a href="/user/logout"><span class="glyphicon glyphicon-user"></span>logout</a></li>
+      {{ else }}
+
+      <li><a href="/user/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="/user/signin"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</nav>
+
+
